@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dettaglio Immagine - EPICODE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .img-detail {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .photographer-info {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .photographer-info h2 {
+        font-size: 2.5rem;
+        color: #343a40;
+      }
+      .photographer-info p {
+        font-size: 1.2rem;
+        color: #6c757d;
+      }
+      .photographer-info a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .photographer-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-dark py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="text-white mb-0">Dettaglio Immagine</h1>
+        <button class="btn btn-outline-light" id="goBackButton">
+          Torna Indietro
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+          <div class="text-center mb-4">
+            <img
+              id="detailImage"
+              src=""
+              class="img-fluid img-detail"
+              alt="Immagine di dettaglio"
+            />
+          </div>
+          <div class="photographer-info">
+            <h2 id="photographerName"></h2>
+            <p>
+              Vedi altre foto di:
+              <a id="photographerLink" href="#" target="_blank"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted py-3 bg-light">
+      <div class="container text-center">
+        <p class="mb-0">EPICODE - Pexels API Example</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/detail-page.js"></script>
+  </body>
+</html>

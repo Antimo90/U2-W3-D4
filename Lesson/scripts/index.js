@@ -22,7 +22,41 @@ const getEvents = function () {
       }
     })
     .then((arrayOfEvents) => {
-      console.log("ARRAYOFEVENTS", arrayOfEvents); // vuoto :(
+      // qui il caricamento degli eventi si è concluso
+      // TOLGO lo spinner dalla pagina
+      document.getElementById("spinner-container").classList.add("d-none");
+      console.log("ARRAYOFEVENTS", arrayOfEvents);
+      // recupero la riga dove appenderemo le colonne con le cards
+      const row = document.getElementById("events-row");
+      if (arrayOfEvents.length === 0) {
+        row.innerHTML = `
+          <div class="col">
+            <p class="text-center">Al momento non ci sono concerti disponibili</p>
+          </div>
+        `;
+      } else {
+        arrayOfEvents.forEach((event) => {
+          row.innerHTML += `
+            <div class="col">
+              <div class="card h-100 d-flex flex-column">
+                <img src="https://psicologinews.it/wp-content/uploads/2024/02/1522324821926_1522324836.jpg-assistere_a_un_concerto_ogni_quindici_giorni_allunga_la_vita_di_nove_anni__scopri_i_risultati_della_ricerca_.jpeg" class="card-img-top" alt="immagine default concerto">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">${event.name}</h5>
+                  <p class="card-text flex-grow-1">${event.description}</p>
+                  <p class="card-text">${new Date(
+                    event.time
+                  ).toLocaleDateString()} ${new Date(
+            event.time
+          ).toLocaleTimeString()} - ${event.price}€</p>
+                  <a href="./detail.html?eventId=${
+                    event._id
+                  }" class="btn btn-primary">Vai ai dettagli</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
     })
     .catch((err) => {
       console.log("ERRORE", err);

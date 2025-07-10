@@ -30,10 +30,7 @@
             <a class="navbar-brand" href="#">EpiTicket-One</a>
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
@@ -57,7 +54,7 @@
       </nav>
       <section class="text-center">
         <h1>EpiTicket-One</h1>
-        <h2>Compra qua i biglietti dei tuoi artisti preferiti</h2>
+        <h2>Dettagli del concerto</h2>
       </section>
     </header>
     <main class="flex-grow-1">
@@ -67,10 +64,30 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div
-          id="events-row"
-          class="row justify-content-center my-4 g-2 row-cols-1 row-cols-md-2 row-cols-lg-3"
-        ></div>
+        <div class="row justify-content-center my-4 g-2">
+          <div class="col col-12 col-md-6">
+            <div class="card">
+              <img
+                src="https://psicologinews.it/wp-content/uploads/2024/02/1522324821926_1522324836.jpg-assistere_a_un_concerto_ogni_quindici_giorni_allunga_la_vita_di_nove_anni__scopri_i_risultati_della_ricerca_.jpeg"
+                class="card-img-top"
+                alt="immagine default concerto"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <p class="card-text"></p>
+                <div>
+                  <button onclick="editConcert()" class="btn btn-warning">
+                    MODIFICA
+                  </button>
+                  <button onclick="deleteConcert()" class="btn btn-danger">
+                    ELIMINA
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -81,6 +98,6 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/detail.js"></script>
   </body>
 </html>
